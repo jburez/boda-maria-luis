@@ -4,140 +4,164 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Boda de María & Luis</title>
-  <meta name="description" content="Toda la información de la boda de María y Luis: ceremonia, celebración, historia, fotos, alojamiento y cómo llegar." />
-  <meta name="theme-color" content="#d8b48a" />
+  <meta name="description" content="Web de la boda de María y Luis: ceremonia, celebración, historia, fotos, alojamientos, mapas y confirmación de asistencia." />
+  <meta name="theme-color" content="#efe6d9" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header" id="inicio">
     <nav class="nav" aria-label="Navegación principal">
-      <a class="brand" href="#inicio">María & Luis</a>
+      <a class="brand" href="#inicio" aria-label="Inicio">M <span>&</span> L</a>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <div class="nav-links">
-        <a href="#boda">La boda</a>
-        <a href="#historia">Nuestra historia</a>
+        <a href="#boda">El día</a>
+        <a href="#historia">Historia</a>
         <a href="#fotos">Fotos</a>
-        <a href="#como-llegar">Cómo llegar</a>
+        <a href="#ubicacion">Cómo llegar</a>
         <a href="#alojamiento">Alojamiento</a>
-        <a class="nav-cta" href="#confirmacion">Confirmar asistencia</a>
+        <a class="nav-cta" href="#confirmacion">Confirmar</a>
       </div>
     </nav>
 
     <section class="hero section-shell">
-      <div class="hero-content reveal">
+      <div class="hero-copy reveal">
         <p class="eyebrow">Nos casamos</p>
-        <h1>María & Luis</h1>
+        <h1>María<br><span>& Luis</span></h1>
         <p class="hero-date">Próximamente · Málaga</p>
-        <p class="hero-text">Estamos preparando un día muy especial y queremos compartirlo con vosotros. Aquí encontraréis toda la información práctica de la boda.</p>
+        <p class="hero-text">Una invitación digital elegante para reunir en un solo lugar todos los detalles importantes de nuestro gran día.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#boda">Ver detalles</a>
-          <a class="button secondary" href="#historia">Nuestra historia</a>
+          <a class="button primary" href="#boda">Ver información</a>
+          <a class="button ghost" href="#confirmacion">Confirmar asistencia</a>
         </div>
       </div>
-      <div class="hero-card reveal" aria-label="Imagen decorativa de la boda">
-        <div class="photo-placeholder">
-          <span>Foto de María y Luis</span>
+
+      <div class="hero-visual reveal" aria-label="Espacio para foto principal de María y Luis">
+        <div class="hero-photo photo-slot">
+          <span>Foto principal</span>
           <small>assets/img/portada.jpg</small>
+        </div>
+        <div class="date-card" aria-label="Fecha de la boda pendiente de confirmar">
+          <span>Save</span>
+          <strong>the date</strong>
+          <small>Fecha pendiente</small>
         </div>
       </div>
     </section>
   </header>
 
   <main>
-    <section class="section section-shell intro reveal">
+    <section class="intro section-shell reveal" aria-label="Introducción">
       <p class="section-kicker">Bienvenidos</p>
-      <h2>Una web sencilla para tenerlo todo a mano</h2>
-      <p>Actualizaremos esta página con la fecha definitiva, horarios, direcciones, recomendaciones de alojamiento y el formulario para confirmar asistencia.</p>
+      <h2>Todo lo que necesitáis saber, contado con calma y cariño.</h2>
+      <p>Estamos preparando esta web como punto de encuentro para la boda: horarios, ubicaciones, alojamientos, recomendaciones y, más adelante, confirmación de asistencia.</p>
     </section>
 
     <section class="section section-shell" id="boda">
       <div class="section-heading reveal">
-        <p class="section-kicker">Información del día</p>
-        <h2>La boda</h2>
+        <p class="section-kicker">El gran día</p>
+        <h2>Ceremonia y celebración</h2>
+        <p>Cuando tengamos todos los detalles cerrados, esta será la sección principal para consultar horarios, direcciones e indicaciones importantes.</p>
       </div>
-      <div class="cards-grid two-columns">
-        <article class="info-card reveal">
-          <span class="card-icon">✦</span>
+
+      <div class="event-grid">
+        <article class="event-card reveal">
+          <p class="event-number">01</p>
           <h3>Ceremonia</h3>
-          <p class="meta">Hora pendiente</p>
-          <p>Lugar de la ceremonia pendiente de confirmar. Aquí añadiremos dirección, hora exacta y cualquier indicación importante.</p>
-          <a class="text-link" href="#como-llegar">Ver cómo llegar</a>
+          <p class="meta">Hora y lugar pendientes</p>
+          <p>Espacio reservado para indicar la ubicación exacta, hora de llegada recomendada y cualquier detalle sobre la ceremonia.</p>
+          <a class="text-link" href="#ubicacion">Ver cómo llegar</a>
         </article>
-        <article class="info-card reveal">
-          <span class="card-icon">✧</span>
+
+        <article class="event-card featured reveal">
+          <p class="event-number">02</p>
           <h3>Celebración</h3>
-          <p class="meta">Cocktail, cena y fiesta</p>
-          <p>Después de la ceremonia celebraremos juntos con comida, música y muchas ganas de disfrutar.</p>
+          <p class="meta">Cocktail · Cena · Fiesta</p>
+          <p>Después de la ceremonia celebraremos juntos con comida, música y muchas ganas de disfrutar con familia y amigos.</p>
           <a class="text-link" href="#confirmacion">Confirmación próximamente</a>
+        </article>
+
+        <article class="event-card reveal">
+          <p class="event-number">03</p>
+          <h3>Información útil</h3>
+          <p class="meta">Dress code, transporte y notas</p>
+          <p>Aquí podremos añadir recomendaciones de vestimenta, transporte, parking, horarios especiales o información para invitados.</p>
+          <a class="text-link" href="#alojamiento">Ver alojamientos</a>
         </article>
       </div>
     </section>
 
-    <section class="section story-section" id="historia">
-      <div class="section-shell story-layout">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Nuestra historia</p>
-          <h2>María y Luis</h2>
-          <p>Este espacio será para contar quiénes son, cómo se conocieron y algunos momentos importantes de su historia.</p>
+    <section class="section editorial-section" id="historia">
+      <div class="section-shell editorial-layout">
+        <div class="editorial-image photo-slot reveal">
+          <span>Foto de pareja</span>
+          <small>assets/img/historia.jpg</small>
         </div>
-        <div class="timeline reveal">
-          <div class="timeline-item">
-            <span>01</span>
-            <div>
-              <h3>Cómo nos conocimos</h3>
-              <p>Un pequeño texto sobre el primer encuentro, una anécdota o el inicio de la relación.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span>02</span>
-            <div>
-              <h3>Nuestros momentos</h3>
-              <p>Viajes, planes, recuerdos y pequeñas historias que queráis compartir con los invitados.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <span>03</span>
-            <div>
-              <h3>La pedida</h3>
-              <p>Aquí irá el relato de la pedida o el momento en el que decidisteis dar este paso.</p>
-            </div>
+        <div class="editorial-copy reveal">
+          <p class="section-kicker">Nuestra historia</p>
+          <h2>La historia de María y Luis</h2>
+          <p>Este bloque está pensado para contar quiénes sois, cómo os conocisteis y qué momentos os han traído hasta aquí.</p>
+
+          <div class="story-list">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Cómo nos conocimos</h3>
+                <p>Una primera anécdota, un lugar, una casualidad o ese momento que merece quedarse escrito.</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Nuestros momentos</h3>
+                <p>Viajes, planes, recuerdos, familia, amigos y todo lo que forma parte de vuestra historia.</p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>La pedida</h3>
+                <p>El relato de cómo decidisteis dar este paso y empezar a preparar este día tan especial.</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section section-shell" id="fotos">
-      <div class="section-heading reveal">
+      <div class="section-heading centered reveal">
         <p class="section-kicker">Galería</p>
-        <h2>Fotos</h2>
-        <p>De momento dejamos espacios preparados para sustituir por vuestras fotos reales.</p>
+        <h2>Algunas fotos bonitas</h2>
+        <p>La estructura está preparada para sustituir estos espacios por fotos reales de María y Luis.</p>
       </div>
+
       <div class="gallery-grid">
-        <div class="gallery-item large reveal">Foto 1</div>
-        <div class="gallery-item reveal">Foto 2</div>
-        <div class="gallery-item reveal">Foto 3</div>
-        <div class="gallery-item reveal">Foto 4</div>
-        <div class="gallery-item wide reveal">Foto 5</div>
+        <div class="gallery-item tall photo-slot reveal"><span>Foto 1</span></div>
+        <div class="gallery-item photo-slot reveal"><span>Foto 2</span></div>
+        <div class="gallery-item photo-slot reveal"><span>Foto 3</span></div>
+        <div class="gallery-item wide photo-slot reveal"><span>Foto 4</span></div>
+        <div class="gallery-item photo-slot reveal"><span>Foto 5</span></div>
       </div>
     </section>
 
-    <section class="section map-section" id="como-llegar">
-      <div class="section-shell split-layout">
-        <div class="section-heading reveal">
+    <section class="section location-section" id="ubicacion">
+      <div class="section-shell location-layout">
+        <div class="location-copy reveal">
           <p class="section-kicker">Ubicación</p>
           <h2>Cómo llegar</h2>
-          <p>Añadiremos los enlaces exactos de Google Maps para la ceremonia y la celebración cuando estén confirmados.</p>
+          <p>Cuando estén confirmadas las direcciones, añadiremos aquí los botones directos a Google Maps para la ceremonia y la celebración.</p>
           <div class="button-row">
             <a class="button primary" href="https://www.google.com/maps" target="_blank" rel="noopener">Abrir Google Maps</a>
-            <a class="button secondary" href="#alojamiento">Ver alojamientos</a>
+            <a class="button ghost" href="#alojamiento">Ver dónde dormir</a>
           </div>
         </div>
+
         <div class="map-card reveal">
           <span>Mapa pendiente</span>
-          <small>Podemos insertar aquí Google Maps o botones directos.</small>
+          <small>Google Maps o enlace directo</small>
         </div>
       </div>
     </section>
@@ -146,23 +170,27 @@
       <div class="section-heading reveal">
         <p class="section-kicker">Para invitados</p>
         <h2>Alojamientos cercanos</h2>
-        <p>Listado inicial preparado para completar con hoteles, apartamentos y recomendaciones cerca del evento.</p>
+        <p>Esta zona quedará lista para hoteles, apartamentos, casas rurales o zonas recomendadas según cercanía y transporte.</p>
       </div>
-      <div class="cards-grid three-columns">
-        <article class="info-card reveal">
+
+      <div class="accommodation-grid">
+        <article class="accommodation-card reveal">
+          <span>Hotel</span>
           <h3>Hotel recomendado</h3>
           <p class="meta">Distancia pendiente</p>
-          <p>Opción cómoda para invitados que prefieran hotel.</p>
+          <p>Opción cómoda para invitados que prefieran alojamiento clásico y servicios de hotel.</p>
         </article>
-        <article class="info-card reveal">
+        <article class="accommodation-card reveal">
+          <span>Grupo</span>
           <h3>Apartamentos</h3>
-          <p class="meta">Ideal para grupos</p>
-          <p>Buena opción para familias o amigos que quieran alojarse juntos.</p>
+          <p class="meta">Ideal para familias y amigos</p>
+          <p>Una alternativa práctica para quienes quieran compartir estancia varios días.</p>
         </article>
-        <article class="info-card reveal">
+        <article class="accommodation-card reveal">
+          <span>Zona</span>
           <h3>Zona recomendada</h3>
           <p class="meta">Pendiente de definir</p>
-          <p>Aquí indicaremos qué zona conviene más según transporte y cercanía.</p>
+          <p>Indicaremos qué zonas son más cómodas por cercanía, aparcamiento o transporte.</p>
         </article>
       </div>
     </section>
@@ -170,9 +198,9 @@
     <section class="section rsvp-section" id="confirmacion">
       <div class="section-shell rsvp-card reveal">
         <p class="section-kicker">RSVP</p>
-        <h2>Confirmación de asistencia</h2>
-        <p>Este será el último componente que implementaremos. De momento queda reservado para añadir el formulario cuando tengamos cerrada la lista de invitados.</p>
-        <button class="button primary" disabled>Formulario próximamente</button>
+        <h2>¿Nos acompañáis?</h2>
+        <p>El formulario de confirmación será el último componente que implementaremos. De momento dejamos el bloque preparado para integrarlo cuando tengamos cerrada la lista de invitados.</p>
+        <button class="button light" disabled>Formulario próximamente</button>
       </div>
     </section>
   </main>
