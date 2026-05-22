@@ -3,210 +3,158 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>María & Luis | La boda en directo</title>
-  <meta name="description" content="Web de la boda de María y Luis con estética rockera: ceremonia, celebración, historia, fotos, alojamientos, mapas y confirmación de asistencia." />
-  <meta name="theme-color" content="#11100f" />
+  <title>María & Luis | Nuestra boda</title>
+  <meta name="description" content="Invitación digital de la boda de María y Luis: historia, ceremonia, celebración, alojamientos, ubicación y confirmación de asistencia." />
+  <meta name="theme-color" content="#f4eadf" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header" id="inicio">
+  <header class="cover" id="inicio">
     <nav class="nav" aria-label="Navegación principal">
-      <a class="brand" href="#inicio" aria-label="Inicio">M&L <span>LIVE</span></a>
+      <a class="brand" href="#inicio">María & Luis</a>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <div class="nav-links">
-        <a href="#boda">El día</a>
         <a href="#historia">Historia</a>
-        <a href="#fotos">Backstage</a>
-        <a href="#ubicacion">Ruta</a>
-        <a href="#alojamiento">Dormir</a>
-        <a class="nav-cta" href="#confirmacion">RSVP</a>
+        <a href="#dia">El día</a>
+        <a href="#galeria">Fotos</a>
+        <a href="#viaje">Viaje</a>
+        <a class="nav-cta" href="#rsvp">RSVP</a>
       </div>
     </nav>
 
-    <section class="hero section-shell">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Gira única · Invitación oficial</p>
-        <h1>María<br><span>& Luis</span></h1>
-        <p class="hero-date">Próximamente · Málaga · Una noche para recordar</p>
-        <p class="hero-text">No es solo una boda. Es nuestro concierto más importante: familia, amigos, emoción, carretera y final feliz.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#boda">Ver el cartel</a>
-          <a class="button ghost" href="#confirmacion">Confirmar asistencia</a>
-        </div>
+    <section class="cover-inner section-shell">
+      <div class="cover-letter reveal">
+        <p class="overline">Una invitación para celebrar</p>
+        <h1><span>María</span><em>&</em><span>Luis</span></h1>
+        <p class="cover-date">Próximamente · Málaga</p>
+        <p class="cover-text">Hay días que se guardan para siempre. El nuestro queremos vivirlo con las personas que forman parte de nuestra historia.</p>
+        <a class="button primary" href="#dia">Ver detalles</a>
       </div>
 
-      <div class="hero-visual reveal" aria-label="Foto principal de María y Luis">
-        <div class="hero-photo photo-slot">
-          <span>Foto principal</span>
+      <div class="cover-photo reveal">
+        <div class="photo-frame main-photo">
+          <span>Foto de María y Luis</span>
           <small>assets/img/portada.jpg</small>
         </div>
-        <div class="date-card" aria-label="Fecha de la boda pendiente de confirmar">
-          <span>Save</span>
-          <strong>the date</strong>
-          <small>Fecha pendiente</small>
-        </div>
+        <p class="hand-note">Nos encantará compartir este día contigo.</p>
       </div>
     </section>
   </header>
 
   <main>
-    <section class="intro section-shell reveal" aria-label="Introducción">
-      <p class="section-kicker">Entrada general</p>
-      <h2>Bienvenidos al show de nuestras vidas.</h2>
-      <p>Aquí iremos dejando todo lo importante para que nadie se pierda nada: horarios, ubicaciones, alojamiento, fotos, recomendaciones y confirmación de asistencia.</p>
+    <section class="opening section-shell reveal" aria-label="Mensaje de bienvenida">
+      <p class="script">Queridos amigos y familia</p>
+      <h2>Estamos preparando una boda sencilla, bonita y muy nuestra.</h2>
+      <p>Esta web será el lugar donde iremos reuniendo todos los detalles: horarios, ubicaciones, recomendaciones, alojamiento y, más adelante, la confirmación de asistencia.</p>
     </section>
 
-    <section class="section section-shell" id="boda">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Setlist del día</p>
-        <h2>El cartel de la boda</h2>
-        <p>La información definitiva irá apareciendo aquí cuando esté cerrada. De momento dejamos el escenario montado.</p>
-      </div>
-
-      <div class="event-grid">
-        <article class="event-card reveal">
-          <p class="event-number">Track 01</p>
-          <h3>Ceremonia</h3>
-          <p class="meta">Hora y lugar pendientes</p>
-          <p>El primer acorde del día. Añadiremos ubicación exacta, hora de llegada recomendada e indicaciones importantes.</p>
-          <a class="text-link" href="#ubicacion">Ver ruta</a>
-        </article>
-
-        <article class="event-card featured reveal">
-          <p class="event-number">Track 02</p>
-          <h3>Celebración</h3>
-          <p class="meta">Cocktail · Cena · Fiesta</p>
-          <p>El plato fuerte: brindis, música, familia, amigos y una noche con ganas de quedarse en la memoria.</p>
-          <a class="text-link" href="#confirmacion">RSVP próximamente</a>
-        </article>
-
-        <article class="event-card reveal">
-          <p class="event-number">Track 03</p>
-          <h3>Info útil</h3>
-          <p class="meta">Dress code, transporte y notas</p>
-          <p>Parking, recomendaciones, horarios especiales, taxis, buses o cualquier detalle práctico para invitados.</p>
-          <a class="text-link" href="#alojamiento">Dónde dormir</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section editorial-section" id="historia">
-      <div class="section-shell editorial-layout">
-        <div class="editorial-image photo-slot reveal">
-          <span>Backstage</span>
-          <small>assets/img/historia.jpg</small>
+    <section class="chapter story-chapter" id="historia">
+      <div class="section-shell story-wrap">
+        <div class="story-title reveal">
+          <p class="overline">Nuestra historia</p>
+          <h2>Antes de llegar hasta aquí.</h2>
         </div>
-        <div class="editorial-copy reveal">
-          <p class="section-kicker">Lado B</p>
-          <h2>La historia antes del sí.</h2>
-          <p>Un espacio para contar de dónde viene todo esto: el primer encuentro, las canciones del camino y los momentos que nos han traído hasta aquí.</p>
 
-          <div class="story-list">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>Primer acorde</h3>
-                <p>Cómo nos conocimos, qué pasó aquella primera vez y por qué merecía empezar esta historia.</p>
-              </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>La gira</h3>
-                <p>Viajes, planes, familia, amigos, recuerdos y todos esos capítulos que han ido sumando.</p>
-              </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>El bis</h3>
-                <p>La pedida, la decisión y el momento en el que empezó la cuenta atrás para la boda.</p>
-              </div>
-            </article>
-          </div>
+        <div class="story-moments">
+          <article class="moment reveal">
+            <span>01</span>
+            <h3>El comienzo</h3>
+            <p>Aquí contaremos cómo empezó todo: el primer encuentro, la primera conversación o esa casualidad que terminó cambiándolo todo.</p>
+          </article>
+          <article class="moment reveal">
+            <span>02</span>
+            <h3>El camino</h3>
+            <p>Viajes, planes, familia, amigos, rutinas y todos esos pequeños momentos que han ido construyendo nuestra historia.</p>
+          </article>
+          <article class="moment reveal">
+            <span>03</span>
+            <h3>La decisión</h3>
+            <p>El sí, la pedida y el momento en el que empezamos a imaginar este día rodeados de las personas que queremos.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-shell" id="fotos">
-      <div class="section-heading centered reveal">
-        <p class="section-kicker">Backstage pass</p>
-        <h2>Fotos con ruido, alma y carretera.</h2>
-        <p>Preparado para sustituir estos espacios por fotos reales de María y Luis con una estética más de cartel musical.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-item tall photo-slot reveal"><span>Foto 1</span></div>
-        <div class="gallery-item photo-slot reveal"><span>Foto 2</span></div>
-        <div class="gallery-item photo-slot reveal"><span>Foto 3</span></div>
-        <div class="gallery-item wide photo-slot reveal"><span>Foto 4</span></div>
-        <div class="gallery-item photo-slot reveal"><span>Foto 5</span></div>
-      </div>
-    </section>
-
-    <section class="section location-section" id="ubicacion">
-      <div class="section-shell location-layout">
-        <div class="location-copy reveal">
-          <p class="section-kicker">Ruta del concierto</p>
-          <h2>Cómo llegar</h2>
-          <p>Añadiremos los enlaces exactos a Google Maps para que todos lleguen al lugar correcto sin perderse por el camino.</p>
-          <div class="button-row">
-            <a class="button primary" href="https://www.google.com/maps" target="_blank" rel="noopener">Abrir Google Maps</a>
-            <a class="button ghost" href="#alojamiento">Ver alojamiento</a>
-          </div>
+    <section class="chapter day-chapter section-shell" id="dia">
+      <div class="day-card reveal">
+        <div>
+          <p class="overline">El día de la boda</p>
+          <h2>Ceremonia, celebración y una noche para recordar.</h2>
         </div>
-
-        <div class="map-card reveal">
-          <span>Mapa pendiente</span>
-          <small>Google Maps o enlace directo</small>
+        <div class="day-details">
+          <article>
+            <span>Ceremonia</span>
+            <p>Hora y lugar pendientes. Añadiremos dirección exacta, indicaciones y hora recomendada de llegada.</p>
+          </article>
+          <article>
+            <span>Celebración</span>
+            <p>Cocktail, cena y fiesta. Aquí iremos incorporando horarios y cualquier detalle importante.</p>
+          </article>
+          <article>
+            <span>Notas útiles</span>
+            <p>Dress code, transporte, parking, taxis o recomendaciones para que todo sea más fácil.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-shell" id="alojamiento">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Después del último tema</p>
-        <h2>Dónde dormir</h2>
-        <p>Hoteles, apartamentos, casas rurales y zonas recomendadas para que el final de la noche sea fácil.</p>
+    <section class="chapter gallery-chapter" id="galeria">
+      <div class="section-shell">
+        <div class="gallery-heading reveal">
+          <p class="overline">Álbum</p>
+          <h2>Fotos que todavía estamos eligiendo.</h2>
+          <p>Dejamos preparada una galería más visual e íntima, pensada para fotos grandes y con aire de recuerdo familiar.</p>
+        </div>
+        <div class="photo-collage">
+          <div class="photo-frame tall reveal"><span>Foto 1</span></div>
+          <div class="photo-frame reveal"><span>Foto 2</span></div>
+          <div class="photo-frame reveal"><span>Foto 3</span></div>
+          <div class="photo-frame wide reveal"><span>Foto 4</span></div>
+        </div>
       </div>
+    </section>
 
-      <div class="accommodation-grid">
-        <article class="accommodation-card reveal">
-          <span>Hotel</span>
-          <h3>Hotel recomendado</h3>
-          <p class="meta">Distancia pendiente</p>
-          <p>Opción cómoda para invitados que quieran tenerlo todo fácil.</p>
+    <section class="chapter travel-chapter section-shell" id="viaje">
+      <div class="travel-copy reveal">
+        <p class="overline">Para llegar y quedarse</p>
+        <h2>Ubicación y alojamiento.</h2>
+        <p>Cuando tengamos las direcciones definitivas, añadiremos enlaces directos a Google Maps y recomendaciones de alojamiento cercanas.</p>
+        <div class="button-row">
+          <a class="button primary" href="https://www.google.com/maps" target="_blank" rel="noopener">Abrir Google Maps</a>
+          <a class="button secondary" href="#rsvp">Confirmar asistencia</a>
+        </div>
+      </div>
+      <div class="travel-notes reveal">
+        <article>
+          <span>Mapa</span>
+          <p>Enlace directo a ceremonia y celebración.</p>
         </article>
-        <article class="accommodation-card reveal">
-          <span>Grupo</span>
-          <h3>Apartamentos</h3>
-          <p class="meta">Ideal para familias y amigos</p>
-          <p>Buena alternativa para quienes quieran compartir estancia varios días.</p>
+        <article>
+          <span>Alojamientos</span>
+          <p>Hoteles, apartamentos y zonas recomendadas.</p>
         </article>
-        <article class="accommodation-card reveal">
-          <span>Zona</span>
-          <h3>Zona recomendada</h3>
-          <p class="meta">Pendiente de definir</p>
-          <p>Indicaremos qué zonas son más cómodas por cercanía, aparcamiento o transporte.</p>
+        <article>
+          <span>Transporte</span>
+          <p>Indicaciones, aparcamiento y posibles taxis.</p>
         </article>
       </div>
     </section>
 
-    <section class="section rsvp-section" id="confirmacion">
+    <section class="chapter rsvp-chapter" id="rsvp">
       <div class="section-shell rsvp-card reveal">
-        <p class="section-kicker">Última llamada</p>
-        <h2>¿Estáis dentro?</h2>
-        <p>El formulario de confirmación será el último componente que implementaremos. Cuando esté listo, este será el acceso para confirmar asistencia.</p>
-        <button class="button light" disabled>RSVP próximamente</button>
+        <p class="script">¿Nos acompañas?</p>
+        <h2>Confirmación de asistencia</h2>
+        <p>El formulario será el último componente que implementaremos. De momento dejamos este espacio preparado para integrarlo con calma.</p>
+        <button class="button primary" disabled>Formulario próximamente</button>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>María & Luis · La boda en directo</p>
+  <footer class="footer section-shell">
+    <p>María & Luis · Con todo nuestro cariño</p>
     <a href="#inicio">Volver arriba</a>
   </footer>
 
