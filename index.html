@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,15 +27,21 @@
     </nav>
 
     <section class="hero">
-      <p class="hero-eyebrow">Nos casamos</p>
-      <h1 class="hero-names">María &amp; Luis</h1>
-      <p class="hero-copy">Nada nos haría más ilusión que celebrar este día con vosotros.</p>
-      <div class="hero-date">
-        <span>24 de octubre</span>
-        <span>·</span>
-        <span>2026</span>
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/img/deco/poster-dolomitas.jpg">
+        <source src="assets/video/dolomitas.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Nos casamos</p>
+        <h1 class="hero-names">María &amp; Luis</h1>
+        <p class="hero-copy">Nada nos haría más ilusión que celebrar este día con vosotros.</p>
+        <div class="hero-date">
+          <span>24 de octubre</span>
+          <span>·</span>
+          <span>2026</span>
+        </div>
+        <p class="hero-invite">¡Te esperamos!</p>
       </div>
-      <p class="hero-invite">¡Te esperamos!</p>
       <div class="hero-watercolor">
         <img src="assets/img/deco/acuarela-colinas.png" alt="Ilustración en acuarela de colinas de olivos, inspirada en nuestra invitación" loading="eager" />
       </div>
@@ -48,12 +55,14 @@
         <span>Ceremonia</span>
         <h2>Iglesia del Carmen</h2>
         <p>Antequera, Málaga · 12:00 h</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Iglesia+del+Carmen+Antequera" target="_blank" rel="noopener">Ver en el mapa ↗</a>
       </article>
       <article>
         <p class="rule">＊ ＊ ＊</p>
         <span>Celebración</span>
         <h2>Finca El Romeral</h2>
         <p>Cóctel, comida y fiesta a partir de las 14:00 h</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Finca+El+Romeral+Antequera" target="_blank" rel="noopener">Ver en el mapa ↗</a>
       </article>
     </section>
 
@@ -68,23 +77,26 @@
           <h3>Ceremonia</h3>
           <span>12.00 h</span>
         </article>
+        <span class="schedule-arrow" aria-hidden="true">⟶</span>
         <article class="reveal">
           <img src="assets/img/deco/icon-coctel.png" alt="" loading="lazy" />
           <h3>Cóctel</h3>
           <span>14.00 h</span>
         </article>
+        <span class="schedule-arrow" aria-hidden="true">⟶</span>
         <article class="reveal">
           <img src="assets/img/deco/icon-comida.png" alt="" loading="lazy" />
           <h3>Comida</h3>
           <span>16.30 h</span>
         </article>
+        <span class="schedule-arrow" aria-hidden="true">⟶</span>
         <article class="reveal">
           <img src="assets/img/deco/icon-fiesta.png" alt="" loading="lazy" />
           <h3>Fiesta</h3>
           <span>18.30 h</span>
         </article>
       </div>
-      <p class="schedule-note reveal">Todo ocurrirá en la Finca El Romeral, donde celebraremos juntos hasta que el cuerpo aguante.</p>
+      <p class="schedule-note reveal">La ceremonia es en la Iglesia del Carmen; el cóctel, la comida y la fiesta serán después en la Finca El Romeral, donde celebraremos juntos hasta que el cuerpo aguante.</p>
     </section>
 
     <section class="story section-shell" id="historia">
@@ -143,10 +155,47 @@
       </div>
     </section>
 
+    <section class="travel section-shell" id="viaje">
+      <div class="section-title reveal">
+        <p>Para quienes venís de fuera</p>
+        <h2>Viaje y alojamiento</h2>
+      </div>
+      <p class="story-intro reveal">La boda es en Antequera (Málaga): la ceremonia en la Iglesia del Carmen y la celebración en la Finca El Romeral, a unos 10 minutos en coche. Estas son algunas opciones de alojamiento bien valoradas cerca de ambas.</p>
+
+      <div class="hotel-list reveal">
+        <article class="hotel-card">
+          <h3>Parador de Antequera</h3>
+          <p class="hotel-rating">★ 4.3 <span>Google</span></p>
+          <p>Parador histórico con piscina en pleno centro, a unos 5 minutos en coche de la Iglesia del Carmen.</p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=37.0253125,-4.5645444" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+        </article>
+        <article class="hotel-card">
+          <h3>Finca Eslava</h3>
+          <p class="hotel-rating">★ 4.4 <span>Google</span></p>
+          <p>Casona del siglo XVIII con spa, piscina y restaurante, muy cerca del centro de Antequera.</p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=37.0334553,-4.5615584" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+        </article>
+        <article class="hotel-card">
+          <h3>Hotel Fuente del Sol &amp; Spa</h3>
+          <p class="hotel-rating">★ 4 <span>Tripadvisor</span></p>
+          <p>Hotel rural con spa en plena naturaleza, en La Joya, a unos 15 minutos en coche de Antequera.</p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=36.9346826,-4.6074152" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+        </article>
+        <article class="hotel-card">
+          <h3>Apartamentos en el centro</h3>
+          <p>Si preferís un apartamento, el centro histórico de Antequera tiene muy buena oferta a poca distancia de la iglesia.</p>
+          <a class="map-link" href="https://www.booking.com/apartments/city/es/antequera-ma.html" target="_blank" rel="noopener">Ver apartamentos ↗</a>
+        </article>
+      </div>
+
+      <div id="venue-map" class="venue-map reveal" role="img" aria-label="Mapa con la Iglesia del Carmen, la Finca El Romeral y los alojamientos recomendados"></div>
+      <p class="map-caption">Iglesia del Carmen · Finca El Romeral · alojamientos recomendados</p>
+    </section>
+
     <section class="faq section-shell" id="faq">
       <div class="section-title reveal">
         <p>Tenéis preguntas, tenemos respuestas</p>
-        <h2>FAQ</h2>
+        <h2 class="script-acronym">FAQ</h2>
       </div>
 
       <div class="faq-list">
@@ -160,13 +209,8 @@
           <p>Añadiremos aquí la información sobre niños, menús especiales y cualquier detalle para familias en cuanto lo tengamos cerrado con la finca.</p>
           <span class="faq-pending">Pendiente de confirmar</span>
         </article>
-        <article class="reveal" id="viaje">
-          <h3>Viaje, alojamiento y transporte</h3>
-          <p>La boda es en Antequera (Málaga). Muy pronto incluiremos recomendaciones de hoteles, cómo llegar a la Iglesia del Carmen y a la Finca El Romeral, y opciones de transporte entre ambas.</p>
-          <span class="faq-pending">Pendiente de confirmar</span>
-        </article>
         <article class="reveal" id="rsvp">
-          <h3>RSVP</h3>
+          <h3 class="script-acronym">RSVP</h3>
           <p>¿Nos acompañáis? Por favor, confirmad vuestra asistencia antes del <strong>1 de septiembre de 2026</strong>. Muy pronto habilitaremos aquí mismo un formulario para confirmar en un clic.</p>
           <button class="rsvp-button" disabled>RSVP próximamente</button>
         </article>
@@ -190,6 +234,7 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -53,6 +53,13 @@ img{max-width:100%;display:block}
   align-items:center;justify-content:center;text-align:center;
   padding:150px 24px 0;overflow:hidden;background:var(--cream);
 }
+.hero-video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+}
+.hero-scrim{
+  position:absolute;inset:0;z-index:1;background:rgba(250,245,233,.86);
+}
+.hero-content{position:relative;z-index:2}
 .hero-eyebrow{
   color:var(--rose);font-size:.8rem;font-weight:700;text-transform:uppercase;
   letter-spacing:.32em;margin:0 0 22px;
@@ -76,7 +83,7 @@ img{max-width:100%;display:block}
   font-size:clamp(1.8rem,4vw,2.6rem);
 }
 .hero-watercolor{
-  position:relative;width:100%;margin-top:56px;line-height:0;
+  position:relative;z-index:2;width:100%;margin-top:56px;line-height:0;
 }
 .hero-watercolor img{width:100%;height:auto;object-fit:cover;object-position:bottom}
 
@@ -99,7 +106,12 @@ img{max-width:100%;display:block}
   font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.15;font-weight:600;
 }
 .wedding-basics p:not(.rule){margin:0;max-width:380px;color:var(--muted)}
-.wedding-basics a{border-bottom:1px solid var(--rose);color:var(--olive-deep)}
+.map-link{
+  display:inline-block;margin-top:16px;color:var(--olive-deep);font-size:.8rem;
+  font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  border-bottom:1px solid var(--rose);padding-bottom:2px;
+}
+.map-link:hover{color:var(--rose)}
 
 /* ---------- Section titles ---------- */
 .schedule,.story,.faq,.registry{padding:96px 0;border-bottom:1px solid var(--line)}
@@ -112,15 +124,19 @@ img{max-width:100%;display:block}
 }
 .registry h2{margin:0;font-family:var(--script);color:var(--olive-deep);
   font-weight:400;font-size:clamp(2.6rem,6vw,4.4rem)}
+.script-acronym{
+  font-family:var(--serif)!important;font-style:italic;font-weight:600;
+  text-transform:uppercase;letter-spacing:.1em;
+}
+.section-title .script-acronym{font-size:clamp(2rem,4.6vw,3rem)}
+.faq-list h3.script-acronym{font-size:1.5rem}
 
 /* ---------- Agenda (iconos de la invitación) ---------- */
 .schedule-list{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  background:var(--paper);
+  display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:center;
+  gap:8px 0;padding:10px 0;
 }
-.schedule-list article{padding:38px 20px;text-align:center}
-.schedule-list article+article{border-left:1px solid var(--line)}
+.schedule-list article{padding:12px 26px;text-align:center}
 .schedule-list img{width:104px;height:auto;margin:0 auto 18px;mix-blend-mode:multiply}
 .schedule-list h3{
   margin:0 0 10px;font-family:var(--script);color:var(--olive);
@@ -128,6 +144,10 @@ img{max-width:100%;display:block}
 }
 .schedule-list span{
   display:block;color:var(--ink);font-weight:700;letter-spacing:.06em;font-size:.95rem;
+}
+.schedule-arrow{
+  align-self:center;color:var(--rose);font-size:1.4rem;opacity:.7;
+  margin:0 -4px;transform:translateY(-14px);
 }
 .schedule-note{
   text-align:center;max-width:560px;margin:44px auto 0;color:var(--muted);
@@ -170,6 +190,36 @@ img{max-width:100%;display:block}
   font-weight:400;margin:0 0 16px;
 }
 .venue-video-copy p{color:var(--muted);max-width:420px}
+
+/* ---------- Viaje y alojamiento ---------- */
+.travel{padding:96px 0;border-bottom:1px solid var(--line)}
+.hotel-list{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:20px;
+}
+.hotel-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:10px;
+  padding:26px 22px;text-align:left;
+}
+.hotel-card h3{
+  margin:0 0 8px;font-family:var(--serif);color:var(--olive-deep);
+  font-size:1.3rem;font-weight:600;
+}
+.hotel-rating{
+  margin:0 0 10px;color:var(--gold);font-weight:700;font-size:.95rem;
+}
+.hotel-rating span{
+  margin-left:6px;color:var(--muted);font-weight:600;font-size:.7rem;
+  text-transform:uppercase;letter-spacing:.08em;
+}
+.hotel-card p:not(.hotel-rating){margin:0 0 14px;color:var(--muted);font-size:.94rem}
+.venue-map{
+  margin-top:50px;height:420px;border-radius:10px;overflow:hidden;
+  border:1px solid var(--line);background:var(--paper);
+}
+.map-caption{
+  margin:14px 0 0;text-align:center;color:var(--muted);font-size:.8rem;
+  font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+}
 
 /* ---------- FAQ ---------- */
 .faq-list{display:grid;border-top:1px solid var(--line)}
@@ -223,12 +273,13 @@ img{max-width:100%;display:block}
   .hero-names{font-size:clamp(2.4rem,10vw,5rem)}
   .wedding-basics,.faq-list article{grid-template-columns:1fr}
   .wedding-basics article+article{border-left:0;border-top:1px solid var(--line)}
-  .schedule-list{grid-template-columns:1fr 1fr}
-  .schedule-list article:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .schedule-list article+article{border-left:1px solid var(--line)}
+  .schedule-arrow{display:none}
+  .schedule-list article{width:44%}
   .story-gallery{grid-template-columns:1fr 1fr}
   .proposal,.venue-video{grid-template-columns:1fr;gap:30px}
   .faq-list article{gap:14px}
+  .hotel-list{grid-template-columns:1fr 1fr}
+  .venue-map{height:340px}
 }
 @media(max-width:560px){
   .section-shell{width:min(calc(100% - 26px),1140px)}
@@ -237,7 +288,9 @@ img{max-width:100%;display:block}
   .hero{padding-top:110px}
   .hero-names{font-size:clamp(2rem,12vw,3.4rem)}
   .schedule,.story,.faq,.registry{padding:70px 0}
-  .schedule-list{grid-template-columns:1fr 1fr}
+  .schedule-list article{width:48%;padding:12px 10px}
   .story-gallery{grid-template-columns:1fr 1fr}
+  .hotel-list{grid-template-columns:1fr}
+  .venue-map{height:280px}
   .footer{flex-direction:column}
 }
