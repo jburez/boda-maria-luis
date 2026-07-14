@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>María & Luis | Nuestra boda</title>
-  <meta name="description" content="Invitación digital de la boda de María y Luis: localización, fecha, agenda, preguntas frecuentes, viaje y confirmación de asistencia." />
-  <meta name="theme-color" content="#efe7d8" />
+  <meta name="description" content="24 de octubre de 2026. Nos casamos en la Iglesia del Carmen de Antequera y lo celebramos en la Finca El Romeral. Aquí tenéis toda la información." />
+  <meta name="theme-color" content="#faf5e9" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -17,22 +17,26 @@
       <a class="brand" href="#inicio">M&L</a>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">Menú</button>
       <div class="nav-links">
-        <a href="#rsvp">RSVP</a>
-        <a href="#faq">FAQ</a>
+        <a href="#historia">Nuestra historia</a>
+        <a href="#agenda">Agenda</a>
         <a href="#dress-code">Dress Code</a>
         <a href="#viaje">Viaje y alojamiento</a>
+        <a href="#rsvp">RSVP</a>
       </div>
     </nav>
 
-    <section class="hero reveal">
-      <div class="hero-photo photo-placeholder">
-        <span>Foto de María y Luis</span>
-        <small>assets/img/portada.jpg</small>
+    <section class="hero">
+      <p class="hero-eyebrow">Nos casamos</p>
+      <h1 class="hero-names">María &amp; Luis</h1>
+      <p class="hero-copy">Nada nos haría más ilusión que celebrar este día con vosotros.</p>
+      <div class="hero-date">
+        <span>24 de octubre</span>
+        <span>·</span>
+        <span>2026</span>
       </div>
-
-      <div class="hero-title">
-        <h1>MARÍA &<br>LUIS</h1>
-        <p>Nos casamos</p>
+      <p class="hero-invite">¡Te esperamos!</p>
+      <div class="hero-watercolor">
+        <img src="assets/img/deco/acuarela-colinas.png" alt="Ilustración en acuarela de colinas de olivos, inspirada en nuestra invitación" loading="eager" />
       </div>
     </section>
   </header>
@@ -41,46 +45,102 @@
     <section class="wedding-basics section-shell reveal" aria-label="Datos principales de la boda">
       <article>
         <p class="rule">＊ ＊ ＊</p>
-        <span>Localización</span>
-        <h2>Lugar pendiente de confirmar</h2>
-        <p>Málaga, España</p>
+        <span>Ceremonia</span>
+        <h2>Iglesia del Carmen</h2>
+        <p>Antequera, Málaga · 12:00 h</p>
       </article>
       <article>
         <p class="rule">＊ ＊ ＊</p>
-        <span>Fecha de la boda</span>
-        <h2>Próximamente</h2>
-        <p>Añadiremos la fecha definitiva y los eventos relacionados cuando estén cerrados.</p>
+        <span>Celebración</span>
+        <h2>Finca El Romeral</h2>
+        <p>Cóctel, comida y fiesta a partir de las 14:00 h</p>
       </article>
     </section>
 
-    <section class="schedule section-shell" id="dia">
+    <section class="schedule section-shell" id="agenda">
       <div class="section-title reveal">
-        <h2>Agenda de la boda</h2>
+        <p>Así viviremos el día</p>
+        <h2>Agenda</h2>
       </div>
       <div class="schedule-list">
         <article class="reveal">
-          <h3>Bienvenida</h3>
-          <p>Fecha pendiente</p>
-          <span>Lugar pendiente</span>
+          <img src="assets/img/deco/icon-ceremonia.png" alt="" loading="lazy" />
+          <h3>Ceremonia</h3>
+          <span>12.00 h</span>
         </article>
         <article class="reveal">
-          <h3>Día de la boda</h3>
-          <p>Fecha pendiente</p>
-          <span>Ceremonia · Celebración · Fiesta</span>
+          <img src="assets/img/deco/icon-coctel.png" alt="" loading="lazy" />
+          <h3>Cóctel</h3>
+          <span>14.00 h</span>
         </article>
         <article class="reveal">
-          <h3>Despedida</h3>
-          <p>Fecha pendiente</p>
-          <span>Plan pendiente de confirmar</span>
+          <img src="assets/img/deco/icon-comida.png" alt="" loading="lazy" />
+          <h3>Comida</h3>
+          <span>16.30 h</span>
+        </article>
+        <article class="reveal">
+          <img src="assets/img/deco/icon-fiesta.png" alt="" loading="lazy" />
+          <h3>Fiesta</h3>
+          <span>18.30 h</span>
         </article>
       </div>
+      <p class="schedule-note reveal">Todo ocurrirá en la Finca El Romeral, donde celebraremos juntos hasta que el cuerpo aguante.</p>
     </section>
 
-    <section class="image-strip section-shell reveal" id="galeria" aria-label="Galería de fotos">
-      <div class="photo-placeholder"><span>Foto 1</span></div>
-      <div class="photo-placeholder"><span>Foto 2</span></div>
-      <div class="photo-placeholder"><span>Foto 3</span></div>
-      <div class="photo-placeholder"><span>Foto 4</span></div>
+    <section class="story section-shell" id="historia">
+      <div class="section-title reveal">
+        <p>Un poquito de nosotros</p>
+        <h2>Nuestra historia</h2>
+      </div>
+      <p class="story-intro reveal">Nos gusta viajar, perdernos por ciudades nuevas y volver siempre con una foto de los dos de fondo. Aquí van algunos de los sitios que ya hemos compartido, antes de compartir este.</p>
+
+      <div class="story-gallery reveal">
+        <figure>
+          <img src="assets/img/pareja-miami.jpg" alt="María y Luis al atardecer, con el skyline de Miami de fondo" loading="lazy" />
+          <figcaption>Miami</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/pareja-wynwood.jpg" alt="María y Luis frente a un mural de Wynwood Walls" loading="lazy" />
+          <figcaption>Wynwood Walls</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/pareja-dolomitas.jpg" alt="María y Luis frente a una iglesia de montaña en los Dolomitas" loading="lazy" />
+          <figcaption>Dolomitas, Italia</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/pareja-castro-urdiales.jpg" alt="María y Luis frente al castillo de Santa Ana en Castro Urdiales" loading="lazy" />
+          <figcaption>Castro Urdiales</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/pareja-ronda.jpg" alt="María y Luis junto al lago de Ronda" loading="lazy" />
+          <figcaption>Ronda</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/pareja-granada.jpg" alt="María y Luis con la Alhambra de Granada al fondo" loading="lazy" />
+          <figcaption>Granada</figcaption>
+        </figure>
+      </div>
+
+      <div class="proposal reveal">
+        <video controls preload="none" poster="assets/img/deco/poster-pedida-mano.jpg" playsinline>
+          <source src="assets/video/pedida-mano.mp4" type="video/mp4" />
+        </video>
+        <div class="proposal-copy">
+          <p class="proposal-eyebrow">La pedida</p>
+          <h3>Tokio nos vio decir que sí</h3>
+          <p class="body-copy">Entre los cerezos en flor, Luis se arrodilló y María dijo que sí. Meses después, seguimos celebrándolo — ahora con todos vosotros.</p>
+        </div>
+      </div>
+
+      <div class="venue-video reveal">
+        <div class="venue-video-copy">
+          <h3>Así es El Romeral</h3>
+          <p>La finca donde celebraremos la boda, entre olivos y naranjos. Este vídeo es de nuestro paso por la Feria de Bodas de El Romeral, cuando decidimos que ese sería el sitio.</p>
+        </div>
+        <video controls preload="none" poster="assets/img/deco/poster-el-romeral.jpg" muted loop playsinline>
+          <source src="assets/video/el-romeral.mp4" type="video/mp4" />
+        </video>
+      </div>
     </section>
 
     <section class="faq section-shell" id="faq">
@@ -92,41 +152,41 @@
       <div class="faq-list">
         <article class="reveal" id="dress-code">
           <h3>Dress Code</h3>
-          <ul>
-            <li><strong>Ceremonia:</strong> pendiente de definir.</li>
-            <li><strong>Celebración:</strong> pendiente de definir.</li>
-            <li><strong>Fiesta:</strong> venid cómodos para disfrutar.</li>
-          </ul>
+          <p>Estamos terminando de decidirlo — en cuanto lo tengamos claro lo añadimos aquí.</p>
+          <span class="faq-pending">Pendiente de confirmar</span>
         </article>
         <article class="reveal">
           <h3>Niños</h3>
-          <p>Añadiremos aquí la información definitiva sobre niños, comidas, horarios o cualquier detalle especial para familias.</p>
+          <p>Añadiremos aquí la información sobre niños, menús especiales y cualquier detalle para familias en cuanto lo tengamos cerrado con la finca.</p>
+          <span class="faq-pending">Pendiente de confirmar</span>
         </article>
         <article class="reveal" id="viaje">
           <h3>Viaje, alojamiento y transporte</h3>
-          <p>Incluiremos recomendaciones de hoteles, apartamentos, zonas cercanas, parking, taxis y enlaces directos a Google Maps.</p>
+          <p>La boda es en Antequera (Málaga). Muy pronto incluiremos recomendaciones de hoteles, cómo llegar a la Iglesia del Carmen y a la Finca El Romeral, y opciones de transporte entre ambas.</p>
+          <span class="faq-pending">Pendiente de confirmar</span>
         </article>
         <article class="reveal" id="rsvp">
           <h3>RSVP</h3>
-          <p>¿Nos acompañáis? Muy pronto podréis confirmar vuestra asistencia desde esta misma web.</p>
+          <p>¿Nos acompañáis? Por favor, confirmad vuestra asistencia antes del <strong>1 de septiembre de 2026</strong>. Muy pronto habilitaremos aquí mismo un formulario para confirmar en un clic.</p>
           <button class="rsvp-button" disabled>RSVP próximamente</button>
         </article>
       </div>
     </section>
 
     <section class="registry section-shell reveal">
-      <h2>Lo importante es que estéis.</h2>
-      <p>Vuestra presencia significa muchísimo para nosotros. Cualquier información adicional sobre regalos, lista o luna de miel la añadiremos más adelante si fuese necesario.</p>
+      <h2>Lo importante es que estéis</h2>
+      <p>Vuestra presencia significa muchísimo para nosotros. Si queréis tener un detalle con nosotros, más adelante compartiremos aquí cómo hacerlo.</p>
     </section>
   </main>
 
   <footer class="footer section-shell">
     <a href="#inicio">M&L</a>
     <div>
-      <a href="#rsvp">RSVP</a>
-      <a href="#faq">FAQ</a>
+      <a href="#historia">Nuestra historia</a>
+      <a href="#agenda">Agenda</a>
       <a href="#dress-code">Dress Code</a>
       <a href="#viaje">Viaje y alojamiento</a>
+      <a href="#rsvp">RSVP</a>
     </div>
   </footer>
 
