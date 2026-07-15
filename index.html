@@ -26,22 +26,21 @@
       </div>
     </nav>
 
-    <section class="hero">
+    <section class="hero-cover">
       <video class="hero-video" autoplay muted loop playsinline poster="assets/img/deco/poster-dolomitas.jpg">
         <source src="assets/video/dolomitas.mp4" type="video/mp4" />
       </video>
-      <div class="hero-scrim" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="hero-eyebrow">Nos casamos</p>
-        <h1 class="hero-names">María &amp; Luis</h1>
-        <p class="hero-copy">Nada nos haría más ilusión que celebrar este día con vosotros.</p>
-        <div class="hero-date">
-          <span>24 de octubre</span>
-          <span>·</span>
-          <span>2026</span>
-        </div>
-        <p class="hero-invite">¡Te esperamos!</p>
+      <div class="hero-cover-content">
+        <h1 class="hero-cover-names">María &amp; Luis</h1>
+        <p class="hero-cover-date">24 de octubre de 2026</p>
       </div>
+      <span class="hero-scroll-cue" aria-hidden="true">⌄</span>
+    </section>
+
+    <section class="hero-welcome section-shell">
+      <p class="hero-eyebrow">Nos casamos</p>
+      <p class="hero-copy">Nada nos haría más ilusión que celebrar este día con vosotros.</p>
+      <p class="hero-invite">¡Te esperamos!</p>
       <div class="hero-watercolor">
         <img src="assets/img/deco/acuarela-colinas.png" alt="Ilustración en acuarela de colinas de olivos, inspirada en nuestra invitación" loading="eager" />
       </div>
@@ -71,25 +70,25 @@
         <p>Así viviremos el día</p>
         <h2>Agenda</h2>
       </div>
+      <div class="schedule-strip reveal">
+        <img src="assets/img/deco/agenda-tira.png" alt="Agenda: Ceremonia 12:00 h, Cóctel 14:00 h, Comida 16:30 h, Fiesta 18:30 h" loading="lazy" />
+      </div>
       <div class="schedule-list">
         <article class="reveal">
           <img src="assets/img/deco/icon-ceremonia.png" alt="" loading="lazy" />
           <h3>Ceremonia</h3>
           <span>12.00 h</span>
         </article>
-        <span class="schedule-arrow" aria-hidden="true">⟶</span>
         <article class="reveal">
           <img src="assets/img/deco/icon-coctel.png" alt="" loading="lazy" />
           <h3>Cóctel</h3>
           <span>14.00 h</span>
         </article>
-        <span class="schedule-arrow" aria-hidden="true">⟶</span>
         <article class="reveal">
           <img src="assets/img/deco/icon-comida.png" alt="" loading="lazy" />
           <h3>Comida</h3>
           <span>16.30 h</span>
         </article>
-        <span class="schedule-arrow" aria-hidden="true">⟶</span>
         <article class="reveal">
           <img src="assets/img/deco/icon-fiesta.png" alt="" loading="lazy" />
           <h3>Fiesta</h3>
@@ -164,31 +163,46 @@
 
       <div class="hotel-list reveal">
         <article class="hotel-card">
-          <h3>Parador de Antequera</h3>
-          <p class="hotel-rating">★ 4.3 <span>Google</span></p>
-          <p>Parador histórico con piscina en pleno centro, a unos 5 minutos en coche de la Iglesia del Carmen.</p>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=37.0253125,-4.5645444" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+          <div class="hotel-card-media hotel-card-media--parador">
+            <span class="hotel-badge">★ 4.3 <small>Google</small></span>
+          </div>
+          <div class="hotel-card-body">
+            <h3>Parador de Antequera</h3>
+            <p>Parador histórico con piscina en pleno centro, a unos 5 minutos en coche de la Iglesia del Carmen.</p>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=37.0253125,-4.5645444" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+          </div>
         </article>
         <article class="hotel-card">
-          <h3>Finca Eslava</h3>
-          <p class="hotel-rating">★ 4.4 <span>Google</span></p>
-          <p>Casona del siglo XVIII con spa, piscina y restaurante, muy cerca del centro de Antequera.</p>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=37.0334553,-4.5615584" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+          <div class="hotel-card-media hotel-card-media--eslava">
+            <span class="hotel-badge">★ 4.4 <small>Google</small></span>
+          </div>
+          <div class="hotel-card-body">
+            <h3>Finca Eslava</h3>
+            <p>Casona del siglo XVIII con spa, piscina y restaurante, muy cerca del centro de Antequera.</p>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=37.0334553,-4.5615584" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+          </div>
         </article>
         <article class="hotel-card">
-          <h3>Hotel Fuente del Sol &amp; Spa</h3>
-          <p class="hotel-rating">★ 4 <span>Tripadvisor</span></p>
-          <p>Hotel rural con spa en plena naturaleza, en La Joya, a unos 15 minutos en coche de Antequera.</p>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=36.9346826,-4.6074152" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+          <div class="hotel-card-media hotel-card-media--fuentedelsol">
+            <span class="hotel-badge">★ 4 <small>Tripadvisor</small></span>
+          </div>
+          <div class="hotel-card-body">
+            <h3>Hotel Fuente del Sol &amp; Spa</h3>
+            <p>Hotel rural con spa en plena naturaleza, en La Joya, a unos 15 minutos en coche de Antequera.</p>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=36.9346826,-4.6074152" target="_blank" rel="noopener">Ver en Google Maps ↗</a>
+          </div>
         </article>
         <article class="hotel-card">
-          <h3>Apartamentos en el centro</h3>
-          <p>Si preferís un apartamento, el centro histórico de Antequera tiene muy buena oferta a poca distancia de la iglesia.</p>
-          <a class="map-link" href="https://www.booking.com/apartments/city/es/antequera-ma.html" target="_blank" rel="noopener">Ver apartamentos ↗</a>
+          <div class="hotel-card-media hotel-card-media--apartments"></div>
+          <div class="hotel-card-body">
+            <h3>Apartamentos en el centro</h3>
+            <p>Si preferís un apartamento, el centro histórico de Antequera tiene muy buena oferta a poca distancia de la iglesia.</p>
+            <a class="map-link" href="https://www.booking.com/apartments/city/es/antequera-ma.html" target="_blank" rel="noopener">Ver apartamentos ↗</a>
+          </div>
         </article>
       </div>
 
-      <div id="venue-map" class="venue-map reveal" role="img" aria-label="Mapa con la Iglesia del Carmen, la Finca El Romeral y los alojamientos recomendados"></div>
+      <div id="venue-map" class="venue-map" role="img" aria-label="Mapa con la Iglesia del Carmen, la Finca El Romeral y los alojamientos recomendados"></div>
       <p class="map-caption">Iglesia del Carmen · Finca El Romeral · alojamientos recomendados</p>
     </section>
 

@@ -60,4 +60,7 @@ if (mapEl && window.L) {
   );
 
   map.fitBounds(L.featureGroup(markers).getBounds().pad(0.2));
+
+  window.addEventListener('load', () => map.invalidateSize());
+  window.addEventListener('resize', () => map.invalidateSize());
 }
