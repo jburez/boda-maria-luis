@@ -119,7 +119,7 @@ img{max-width:100%;display:block}
 .map-link:hover{color:var(--rose)}
 
 /* ---------- Section titles ---------- */
-.schedule,.story,.faq,.registry,.travel{padding:96px 0;border-bottom:1px solid var(--line)}
+.schedule,.story,.registry,.travel{padding:96px 0;border-bottom:1px solid var(--line)}
 .section-title{text-align:center;margin-bottom:56px}
 .section-title p{margin:0 0 12px;color:var(--rose);font-size:.8rem;font-weight:700;
   text-transform:uppercase;letter-spacing:.2em}
@@ -134,12 +134,14 @@ img{max-width:100%;display:block}
   text-transform:uppercase;letter-spacing:.1em;
 }
 .section-title .script-acronym{font-size:clamp(2rem,4.6vw,3rem)}
-.faq-list h3.script-acronym{font-size:1.5rem}
 
 /* ---------- Agenda (iconos de la invitación) ---------- */
-.schedule-strip{padding:10px 0}
-.schedule-strip img{width:100%;height:auto;margin:0 auto}
-.schedule-list{display:none}
+.schedule-list{
+  display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;
+  gap:0 clamp(2px,1.5vw,8px);padding:30px 0;
+}
+.schedule-icon{width:clamp(70px,11vw,150px);height:auto;flex-shrink:0}
+.schedule-arrow{width:clamp(46px,7.5vw,110px);height:auto;align-self:center;transform:translateY(-18px);flex-shrink:0}
 .schedule-note{
   text-align:center;max-width:560px;margin:44px auto 0;color:var(--muted);
   font-family:var(--serif);font-style:italic;font-size:1.05rem;
@@ -226,24 +228,16 @@ img{max-width:100%;display:block}
   font-weight:700;text-transform:uppercase;letter-spacing:.08em;
 }
 
-/* ---------- FAQ ---------- */
-.faq-list{display:grid;border-top:1px solid var(--line)}
-.faq-list article{
-  display:grid;grid-template-columns:300px 1fr;gap:36px;padding:36px 0;
-  border-bottom:1px solid var(--line);
+/* ---------- RSVP ---------- */
+.rsvp-section{text-align:center;padding:96px 0;border-bottom:1px solid var(--line)}
+.rsvp-intro{
+  max-width:480px;margin:0 auto;color:var(--muted);font-family:var(--serif);
+  font-size:1.08rem;font-style:italic;
 }
-.faq-list h3{margin:0;font-family:var(--script);color:var(--olive);
-  font-size:2.3rem;font-weight:400}
-.faq-list p,.faq-list li{color:var(--muted);font-size:1rem}
-.faq-list ul{margin:0;padding-left:18px}
-.faq-pending{
-  display:inline-block;margin-top:10px;color:var(--gold);font-size:.76rem;
-  font-weight:700;text-transform:uppercase;letter-spacing:.1em;
-}
-.rsvp-button{
-  margin-top:18px;border:1px solid var(--olive-deep);border-radius:999px;
-  background:var(--olive-deep);color:var(--paper);padding:14px 22px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.08em;cursor:not-allowed;opacity:.75;
+.rsvp-form{margin-top:40px;width:100%;display:flex;justify-content:center}
+.rsvp-form iframe{
+  width:100%;max-width:640px;height:900px;margin:0 auto;border:none;border-radius:10px;
+  background:var(--paper);box-shadow:0 24px 48px -30px rgba(51,44,31,.35);
 }
 
 /* ---------- Regalo / cierre ---------- */
@@ -275,24 +269,14 @@ img{max-width:100%;display:block}
   .nav-links a{padding:13px 0}
   body.menu-open .nav-links{display:flex}
   .hero-cover-names{font-size:clamp(2.6rem,12vw,5.4rem)}
-  .wedding-basics,.faq-list article{grid-template-columns:1fr}
+  .wedding-basics{grid-template-columns:1fr}
+  .rsvp-form iframe{height:820px}
   .wedding-basics article+article{border-left:0;border-top:1px solid var(--line)}
-  .schedule-strip{display:none}
-  .schedule-list{
-    display:flex;flex-wrap:wrap;justify-content:center;gap:36px 0;padding:10px 0;
-  }
-  .schedule-list article{width:44%;padding:6px 14px;text-align:center}
-  .schedule-list img{width:96px;height:auto;margin:0 auto 14px}
-  .schedule-list h3{
-    margin:0 0 8px;font-family:var(--script);color:var(--olive);
-    font-size:1.9rem;font-weight:400;
-  }
-  .schedule-list span{
-    display:block;color:var(--ink);font-weight:700;letter-spacing:.06em;font-size:.9rem;
-  }
+  .schedule-list{gap:20px 12px}
+  .schedule-icon{width:100px}
+  .schedule-arrow{display:none}
   .story-gallery{grid-template-columns:1fr 1fr}
   .proposal,.venue-video{grid-template-columns:1fr;gap:30px}
-  .faq-list article{gap:14px}
   .hotel-list{grid-template-columns:1fr 1fr}
   .venue-map{height:340px}
 }
@@ -302,10 +286,13 @@ img{max-width:100%;display:block}
   .brand{font-size:1.7rem}
   .hero-cover-names{font-size:clamp(2.1rem,15vw,3.6rem)}
   .hero-welcome{padding-top:80px}
-  .schedule,.story,.faq,.registry,.travel{padding:70px 0}
-  .schedule-list article{width:100%;padding:8px 10px}
+  .schedule,.story,.registry,.travel{padding:70px 0}
+  .rsvp-section{padding:70px 0}
+  .schedule-list{justify-content:center;flex-wrap:nowrap;gap:14px}
+  .schedule-icon{width:70px}
   .story-gallery{grid-template-columns:1fr 1fr}
   .hotel-list{grid-template-columns:1fr}
   .venue-map{height:280px}
+  .rsvp-form iframe{height:760px}
   .footer{flex-direction:column}
 }
